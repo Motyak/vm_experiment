@@ -1,4 +1,4 @@
-CFLAGS := -g -ansi -Wall -Wextra -Wpedantic
+CFLAGS := -g -std=c99 -Wall -Wextra -Wpedantic
 
 main2.elf: main.elf bytecode.VM
 	cat main.elf bytecode.VM > main2.elf
