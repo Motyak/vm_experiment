@@ -11,6 +11,11 @@ enum InterpretResult VM__interpret(const uint8_t* bytecode, size_t bytecode_size
             case OP_RETURN: {
                 printf("return\n");
                 ip++;
+                break;
+            }
+            default: {
+                printf("ERROR: unknown instruction (%d)\n", instruction);
+                return INTERPRET_ERR;
             }
         }
     }

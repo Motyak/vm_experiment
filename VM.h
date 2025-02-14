@@ -5,7 +5,7 @@
 #include <stddef.h>
 
 enum OpCode {
-    OP_RETURN = 0
+    OP_RETURN = 91
 };
 
 enum InterpretResult {
@@ -15,4 +15,4 @@ enum InterpretResult {
 
 enum InterpretResult VM__interpret(const uint8_t*, size_t);
 
-#endif /* VM_H */
+#endif // VM_H

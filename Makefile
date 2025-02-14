@@ -11,7 +11,7 @@ main.elf: main.c VM.c VM.h
 
 bytecode.VM:
 	echo -n > bytecode.VM
-	printf "0: %.2x" 0 | xxd -r -g0 >> bytecode.VM # 1 byte
+	printf "0: %.2x" 91 | xxd -r -g0 >> bytecode.VM # 1 byte
 	printf "bytecode" >> bytecode.VM # 8 * 1 byte
 	printf "0: %.8x" 1 \
 	| sed -E 's/0: (..)(..)(..)(..)/0: \4\3\2\1/' \
